@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+
+body {
+  background: url('assets/images/front_ggc.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+.navbar-toggler {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  border: none;
+  background-color: transparent;
+}
+
+.navbar-toggler-icon {
+  background-image: none !important;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  mask-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAzMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgMUgyMFYySDBWMVpNMCA5SDEwVjEwSDBWOVpNMCAxN0gyMFYxOEg1VjE3WiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+');
+  mask-size: cover;
+}
+
