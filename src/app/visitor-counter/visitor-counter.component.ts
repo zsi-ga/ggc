@@ -11,7 +11,7 @@ export class VisitorCounterComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    // Csak böngészőben próbáljuk elérni a localStorage-t
+    
     if (typeof window !== 'undefined' && window.localStorage) {
       const storedCount = localStorage.getItem('visitorCount');
       if (storedCount) {
@@ -20,7 +20,7 @@ export class VisitorCounterComponent implements OnInit {
         this.visitorCount = 0;
       }
 
-      // Növeljük a látogatók számát
+      
       this.incrementVisitorCount();
     }
   }
@@ -28,7 +28,7 @@ export class VisitorCounterComponent implements OnInit {
   incrementVisitorCount() {
     this.visitorCount += 1;
 
-    // Mentjük a látogatói számot a helyi tárolóba (csak böngészőben)
+    
     if (typeof window !== 'undefined' && window.localStorage) {
       localStorage.setItem('visitorCount', this.visitorCount.toString());
     }
