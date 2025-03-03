@@ -1,8 +1,9 @@
-
-<video controls width="640" height="360">
-    <source src="assets/videos/kert.mp4" type="video1/mp4">
-    <h1></h1>
-    <source src="assets/videos/medence.mp4" type="video2/mp4">
-   
- 
+<div class="video-gallery">
+    <div *ngFor="let video of videos" class="video-container">
+      <video controls>
+        <source [src]="video" type="video/mp4">
+        Az Ön böngészője nem támogatja a video elemet.
+      </video>
+    </div>
+  </div>
   

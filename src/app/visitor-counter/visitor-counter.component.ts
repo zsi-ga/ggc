@@ -11,7 +11,6 @@ export class VisitorCounterComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    
     if (typeof window !== 'undefined' && window.localStorage) {
       const storedCount = localStorage.getItem('visitorCount');
       if (storedCount) {
@@ -19,16 +18,12 @@ export class VisitorCounterComponent implements OnInit {
       } else {
         this.visitorCount = 0;
       }
-
-      
       this.incrementVisitorCount();
     }
   }
 
-  incrementVisitorCount() {
+  incrementVisitorCount(): void {
     this.visitorCount += 1;
-
-    
     if (typeof window !== 'undefined' && window.localStorage) {
       localStorage.setItem('visitorCount', this.visitorCount.toString());
     }

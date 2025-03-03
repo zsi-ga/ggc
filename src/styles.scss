@@ -3,12 +3,33 @@ body {
   background: url('assets/images/front_ggc.jpg') no-repeat center center fixed;
   background-size: cover;
 }
+
+
+.custom-bg {
+  background-color: #033e23 !important;
+}
+
+.navbar {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-height: 40px;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+}
+
+.navbar-collapse {
+  margin-top: 10px;
+}
+
+
 .navbar-toggler {
   position: absolute;
   left: 10px;
   top: 10px;
   border: none;
-  background-color: transparent;
+  background-color: green;
 }
 
 .navbar-toggler-icon {
@@ -19,5 +40,52 @@ body {
   background-color: white;
   mask-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAzMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgMUgyMFYySDBWMVpNMCA5SDEwVjEwSDBWOVpNMCAxN0gyMFYxOEg1VjE3WiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+');
   mask-size: cover;
+}
+
+
+@media (max-width: 767.98px) {
+
+  body {
+    background: url('assets/images/front_ggc.jpg') no-repeat center center scroll;
+    background-size: contain;
+    background-attachment: scroll;
+  }
+  
+  
+  .navbar-brand {
+    display: none;
+  }
+  
+  
+  .navbar-collapse {
+    margin-top: 40px;
+  }
+  
+ 
+  .navbar-nav .nav-link {
+    padding: 15px 20px;
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 767.98px) {
+  body {
+    background: url('assets/images/front_ggc.jpg') repeat-y center top;
+    background-size: 100% auto;
+    background-attachment: scroll;
+  }
+}
+
+.large-logo {
+  max-width: 45%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+
+@media (max-width: 767.98px) {
+  .large-logo {
+    max-width: 90% !important;
+  }
 }
 

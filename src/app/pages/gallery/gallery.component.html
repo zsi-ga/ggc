@@ -1,18 +1,17 @@
 <div class="gallery">
-  <div class="row">
-    <div class="col-md-3" *ngFor="let img of images; let i = index">
-      <img [src]="img" class="img-thumbnail" (click)="openImage(i)" />
-    </div>
-  </div>
-
-  <div class="modal" *ngIf="selectedImage">
-    <div class="modal-content">
-      <span class="close" (click)="closeImage()">&times;</span>
-      <img [src]="selectedImage" class="large-image"/>
-      <button class="prev" (click)="prevImage()">&#10094;</button>
-      <button class="next" (click)="nextImage()">&#10095;</button>
-    </div>
-  </div>
+  <img 
+    *ngFor="let image of images; let i = index" 
+    [src]="image" 
+    alt="Gallery Image" 
+    (click)="openImage(i)">
 </div>
 
+<div *ngIf="selectedImage" class="modal">
+  <div class="modal-content">
+    <span class="close" (click)="closeImage()">×</span>
+    <button class="prev" (click)="prevImage()">&#10094;</button>
+    <img [src]="selectedImage" class="large-image" alt="Large Image">
+    <button class="next" (click)="nextImage()">&#10095;</button>
+  </div>
+</div>
 

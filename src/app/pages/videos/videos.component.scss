@@ -1,11 +1,21 @@
 .video-gallery {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-  }
-  
-  .video-container {
-    text-align: center;
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.video-container {
+  max-width: 400px;
+  width: 80%;
+  border: 2px solid #ccc; 
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  display: block;
+}

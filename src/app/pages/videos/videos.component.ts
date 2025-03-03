@@ -1,16 +1,16 @@
-
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common'; 
 
 @Component({
-  selector: 'app-video-gallery',
+  selector: 'app-videos',
+  standalone: true,
+  imports: [CommonModule], 
   templateUrl: './videos.component.html',
-  styleUrls: ['./videos.component.css']
+  styleUrls: ['./videos.component.scss']
 })
 export class VideosComponent {
-
-  videos: string[] = [
-    'kert.mp4',
-    'medence.mp4',
-    'video3.mp4'
+  videos = [
+    'assets/videos/kert.mp4',
+    'assets/videos/medence.mp4'
   ];
 }

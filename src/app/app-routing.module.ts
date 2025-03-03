@@ -5,6 +5,7 @@ import { VideosComponent } from './pages/videos/videos.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { NgModule } from '@angular/core';
 
+
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
@@ -13,7 +14,6 @@ export const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: '**', redirectTo: 'home' }
 ];
-
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

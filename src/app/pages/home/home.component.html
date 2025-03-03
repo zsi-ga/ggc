@@ -1,2 +1,13 @@
-<h1></h1>
-<p></p>
+<div class="home-menu">
+  <img src="assets/images/logo_ggc.jpg" alt="Logo" class="logo" (click)="openLogoModal()">
+</div>
+
+<div *ngIf="showLogoModal" class="logo-modal">
+  <div class="logo-modal-content">
+    <div class="image-container">
+      <img src="assets/images/image1.jpg" alt="Logo" class="large-logo">
+      <span class="close" (click)="closeLogoModal()">×</span>
+    </div>
+    <p class="logo-text">Siófoki wellness apartman medencével, infraszaunával, jakuzzival, kerti sütögetővel és fűszerkerttel.</p>
+  </div>
+</div>

@@ -1,58 +1,36 @@
-<html lang="hu">
-<head>
-  <title>Green Garden Cottage</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-</head>
-<body>
-
-  
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container-fluid">
-      
-      
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
+<nav class="navbar navbar-expand-lg navbar-dark custom-bg fixed-top">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
     
-      <a class="navbar-brand ms-2" href="#">Green Garden Cottage</a>
-      
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link text-white" routerLink="/home"></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" routerLink="/gallery">Képek</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" routerLink="/videos">Videók</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" routerLink="/contact">Elérhetőségek</a>
-          </li>
-        </ul>
-      </div>
-
-<div class="d-flex align-items-center ms-auto text-white">
-  <app-visitor-counter></app-visitor-counter>
-</div>
-
-
+    <a class="navbar-brand ms-2" href="#">Green Garden Cottage</a>
+    
+ 
+    <div class="collapse navbar-collapse" id="navbarNav" #navbarNav>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/home" (click)="onNavLinkClick()">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/gallery" (click)="onNavLinkClick()">Képek</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/videos" (click)="onNavLinkClick()">Videók</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/contact" (click)="onNavLinkClick()">Elérhetőségek</a>
+        </li>
+      </ul>
     </div>
-  </nav>
 
-  
-  <div class="container mt-5 pt-4">
-    <router-outlet></router-outlet>
+    <div class="d-flex align-items-center ms-auto text-white">
+      <app-visitor-counter></app-visitor-counter>
+    </div>
   </div>
+</nav>
 
-
-</body>
-</html>
+<div class="container mt-5 pt-4">
+  <router-outlet></router-outlet>
+</div>
